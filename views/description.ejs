@@ -1,0 +1,31 @@
+<%- include("partials/header") %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-3 tabs">
+      <h5>SwitchGame</h5>
+      <div class="list-group">
+        <li class="list-group-item active">Filler 1</li>
+        <li class="list-group-item">Filler 2</li>
+        <li class="list-group-item">Filler 3</li>
+        <li class="list-group-item"><a href="/gamelist">Go Back</a></li>
+      </div>
+    </div>
+    <div class="col-md-9">
+      <div class="profile">
+        <img class="img-responsive" src="<%= game.image %>" alt="" />
+
+        <div class="caption description-caption">
+          <h4><a href=""><%= game.name %></a></h4>
+          <a class="btn btn-warning" href="/gamelist/<%= game._id %>/edit">Edit</a>
+          <form id="delete-form" action="/gamelist/<%= game._id %>?_method=DELETE" method="POST">
+            <button class="btn btn-danger">Delete</button>
+          </form>
+          <p><%= game.description %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include("partials/footer") %>

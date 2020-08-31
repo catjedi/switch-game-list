@@ -1,0 +1,32 @@
+.profile {
+  padding-top: 2em;
+  padding-left: 6em;
+}
+
+.img-responsive {
+  width: 100%;
+}
+
+.tabs {
+  padding-top: 2em;
+}
+
+.description-caption {
+  padding-top: 1em;
+}
+
+.figure {
+  border: lightgray 1px dashed;
+}
+
+.container {
+  padding-top: 1.5em;
+}
+
+#delete-form {
+  display: inline;
+}
+
+#jumbotron-content {
+  color: white;
+}

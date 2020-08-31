@@ -1,0 +1,34 @@
+<%- include("partials/header") %>
+
+<div class="container">
+  <header class="jumbotron bg-primary">
+    <div class="container">
+      <div id="jumbotron-content">
+        <h1>Switch Game List</h1>
+        <p>
+          View upcoming switch games to release on the switch.
+        </p>
+      </div>
+
+      <p>
+        <a class="btn btn-warning btn-lg" href="/gamelist/new">Add New Game To List</a>
+      </p>
+    </div>
+  </header>
+
+  <div class="row">
+    <% games.forEach((games) => { %>
+    <div class="col-md-3 col-sm-6">
+      <figure class="figure text-center">
+        <img src="<%= games.image %>" class="figure-img img-fluid rounded" />
+        <h5><%= games.name %><h5>
+            <p>
+              <a class="btn btn-primary" href="/gamelist/<%= games._id %>">More Info</a>
+            </p>
+      </figure>
+    </div>
+    <% }) %>
+  </div>
+</div>
+
+<%- include("partials/footer") %>
