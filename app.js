@@ -9,7 +9,7 @@ const Game = require("./models/gamelist");
 const User = require("./models/user");
 
 mongoose.set('useFindAndModify', false);
-mongoose.connect("mongodb://localhost/switch_games", {
+mongoose.connect("mongodb+srv://lnguyen18:starmgaming123@cluster0.mi1xc.mongodb.net/switch_games?retryWrites=true&w=majority", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
